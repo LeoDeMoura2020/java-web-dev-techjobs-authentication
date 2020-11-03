@@ -1,8 +1,8 @@
 package org.launchcode.javawebdevtechjobsauthentication.models.dto;
 
-import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class LoginFormDTO {

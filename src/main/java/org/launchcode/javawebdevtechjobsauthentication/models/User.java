@@ -9,13 +9,13 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class User extends AbstractEntity {
 
-    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-
     @NotNull
     private String username;
 
     @NotNull
     private String pwHash;
+
+    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     public User() {}
 
@@ -23,6 +23,7 @@ public class User extends AbstractEntity {
         this.username = username;
         this.pwHash = encoder.encode(password);
     }
+
 
     public String getUsername() {
         return username;
